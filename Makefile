@@ -13,7 +13,7 @@ build/common/%.o : src/common/%.cpp | build/common
 	$(CXX) -c $(CXXFLAGS) -Isrc/common $< -o $@
 
 build/server/server: build/common/libcommon.a build/server/main.o
-	g++ build/server/main.o build/common/libcommon.a -o build/server/server
+	g++ build/server/main.o build/common/libcommon.a -luring -o build/server/server
 
 build/client/client: build/common/libcommon.a build/client/main.o
 	g++ build/client/main.o build/common/libcommon.a -o build/client/client
