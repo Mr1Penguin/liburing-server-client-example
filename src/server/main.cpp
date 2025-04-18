@@ -77,7 +77,6 @@ int main(int /*argc*/, char** /*argv*/) {
   auto readOddReq = [&ring, &clients](int client) {
     io_uring_sqe* sqe = io_uring_get_sqe(&ring);
     clients[client].buffer.resize(4096);
-    sqe->flags |= IOSQE_IO_LINK;
     io_uring_prep_read(sqe, client, clients[client].buffer.data(), 5, 0);
     auto* res = new Result{.event = Event::readOdd, .fd = client};
     io_uring_sqe_set_data(sqe, res);
