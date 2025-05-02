@@ -1,10 +1,11 @@
 #pragma once
 
-#include "UringCqe.hpp"
+#include "uring/Cqe.hpp"
 
 class ResultHandler {
 public:
   virtual ~ResultHandler() = default;
 
-  virtual void operator()(UringCqe cqe) = 0;
+  virtual void operator()(uring::Cqe cqe) = 0;
 };
+

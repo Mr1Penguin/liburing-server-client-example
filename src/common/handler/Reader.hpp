@@ -1,0 +1,17 @@
+#pragma once
+
+#include <vector>
+
+namespace handler {
+class Reader {
+public:
+  Reader(size_t n) : m_buffer(n) {}
+
+protected:
+  const std::vector<std::byte>& buffer() { return m_buffer; }
+
+private:
+  std::vector<std::byte> m_buffer;
+};
+
+} // namespace handler
