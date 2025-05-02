@@ -25,6 +25,8 @@ void HeaderReader::operator()(uring::Cqe cqe) {
   case message::Header::Type::ReadEntry:
     break;
   }
+
+  return;
 }
 
 }

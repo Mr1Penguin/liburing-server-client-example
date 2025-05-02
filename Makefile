@@ -1,5 +1,5 @@
 CXX := g++
-CXXFLAGS := -std=c++20 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Werror -Woverloaded-virtual -Wunused -Wcast-align -Wconversion -Wmisleading-indentation -Wdouble-promotion -Wimplicit-fallthrough -Wduplicated-branches -Wduplicated-cond -Wlogical-op -Wuseless-cast -fconcepts-diagnostics-depth=3 -MMD -MP
+CXXFLAGS := -std=c++23 -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Werror -Woverloaded-virtual -Wunused -Wcast-align -Wconversion -Wmisleading-indentation -Wdouble-promotion -Wimplicit-fallthrough -Wduplicated-branches -Wduplicated-cond -Wlogical-op -Wuseless-cast -fconcepts-diagnostics-depth=3 -MMD -MP
 
 alL: build/server/server build/client/client
 

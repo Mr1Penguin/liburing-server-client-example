@@ -8,7 +8,10 @@ public:
   Reader(size_t n) : m_buffer(n) {}
 
 protected:
-  const std::vector<std::byte>& buffer() { return m_buffer; }
+  template<class Self>
+  auto&& buffer(this Self&& self) {
+    return std::forward<Self>(self).m_buffer;
+  }
 
 private:
   std::vector<std::byte> m_buffer;

@@ -21,6 +21,10 @@ public:
 
   io_uring_cqe* operator->() { return m_cqe; }
 
+  io_uring* ring() { return m_ring; }
+
+private:
+
   io_uring* m_ring;
   io_uring_cqe* m_cqe;
 };
